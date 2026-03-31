@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -158,24 +159,6 @@ body {
     color: #000;
 }
 
-/* preview list */
-.preview-container{
-    border: 1px solid rgba(255,255,255,0.2);
-    min-height: flex;
-    padding: 30px;
-    background: rgba(0,0,0,0.5);
-}
-
-.preview-title{
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 20px rgba(255,255,255,0.5);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-
 /* Track list */
 .track-container {
     border: 1px solid rgba(255,255,255,0.2);
@@ -218,6 +201,7 @@ body {
     padding: 15px 20px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s;
+    gap: 15px;
 }
 
 .track-item:hover {
@@ -227,74 +211,60 @@ body {
 .track-name {
     font-size: 0.75rem;
     letter-spacing: 0.15em;
+    flex: 1;
+    min-width: 0;
+}
+
+.track-controls {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.play-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.play-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.play-btn.playing {
+    background: rgba(255,255,255,0.2);
 }
 
 .download-btn {
     font-size: 0.75rem;
     letter-spacing: 0.15em;
-    opacity: 0;
-    transition: opacity 0.3s;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fff;
-}
-
-.track-item:hover .download-btn {
     opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #fff;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 10px 15px;
 }
 
 .download-btn:hover {
-    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.1);
 }
 
-/* Audio player styling */
+/* Audio player styling - hidden, controlled by play button */
 .track-item audio {
-    width: 300px;
-    height: 40px;
-    margin-left: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 0;
-    padding: 5px;
-    transition: all 0.3s;
-}
-
-.track-item:hover audio {
-    background: rgba(255, 255, 255, 1);
-    border-color: rgba(255,255,255,0.5);
-}
-
-/* Custom audio player appearance for webkit browsers */
-audio::-webkit-media-controls-panel {
-    background-color: transparent;
-}
-
-audio::-webkit-media-controls-play-button {
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button:hover {
-    background-color: rgba(0,0,0,0.2);
-}
-
-audio::-webkit-media-controls-timeline {
-    background-color: rgba(0,0,0,0.15);
-    border-radius: 2px;
-    height: 6px;
-}
-
-audio::-webkit-media-controls-timeline::-webkit-slider-thumb {
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 50%;
-}
-
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-    color: #000;
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
+    display: none;
 }
 
 /* Footer */
@@ -323,8 +293,66 @@ audio::-webkit-media-controls-time-remaining-display {
     .button-grid {
         grid-template-columns: 1fr;
     }
+
+    .track-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .track-name {
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 0.8rem;
+    }
+
+    .track-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .play-btn {
+        width: 100%;
+        height: 45px;
+    }
+
+    .download-btn {
+        width: 100%;
+        height: 45px;
+        padding: 12px;
+        font-size: 0.7rem;
+    }
+
+    .code-input {
+        font-size: 1rem;
+        letter-spacing: 0.3em;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .glitch-text {
+        font-size: 0.65rem;
+    }
 }
 
+/* preview list */
+.preview-container{
+    border: 1px solid rgba(255,255,255,0.2);
+    min-height: flex;
+    padding: 30px;
+    background: rgba(0,0,0,0.5);
+}
+
+.preview-title{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 /* Popup */
 .popup{
