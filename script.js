@@ -77,6 +77,45 @@ okBtn.addEventListener('click', () => {
     popup.classList.remove("open-popup");
 });
 
+// Play/Pause functionality
+let currentlyPlaying = null;
+
+function togglePlay(button, trackNumber) {
+    const audio = document.getElementById(`audio-${trackNumber}`);
+    const allButtons = document.querySelectorAll('.play-btn');
+    
+    // Stop any currently playing track
+    if (currentlyPlaying && currentlyPlaying !== audio) {
+        currentlyPlaying.pause();
+        currentlyPlaying.currentTime = 0;
+        // Reset the button of the previously playing track
+        allButtons.forEach(btn => {
+            btn.textContent = '▶';
+            btn.classList.remove('playing');
+        });
+    }
+    
+    // Toggle play/pause for the clicked track
+    if (audio.paused) {
+        audio.play();
+        button.textContent = '⏸';
+        button.classList.add('playing');
+        currentlyPlaying = audio;
+        
+        // Reset button when track ends
+        audio.onended = function() {
+            button.textContent = '▶';
+            button.classList.remove('playing');
+            currentlyPlaying = null;
+        };
+    } else {
+        audio.pause();
+        button.textContent = '▶';
+        button.classList.remove('playing');
+        currentlyPlaying = null;
+    }
+}
+
 // Download track function
 function downloadTrack(trackNumber) {
     const trackUrls = {
