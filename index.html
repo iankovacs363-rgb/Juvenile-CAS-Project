@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cp-17</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanline"></div>
+    <div class="noise"></div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1 class="title">Juvenile</h1>
+        <div class="glitch-text" id="glitchText">ENTER ACCESS CODE</div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content-box">
+        <div class="inner-box">
+          <!-- Code Entry -->
+          <div class="code-section">
+            <input
+              type="text"
+              id="codeInput"
+              class="code-input"
+              placeholder="_ _ _ _ _ _ _ _"
+              maxlength="20"
+            />
+            <div
+              id="errorMessage"
+              class="error-message"
+              style="display: none"
+            ></div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="button-grid">
+            <button class="btn" id="submitBtn">SUBMIT</button>
+            <button class="btn" id="requestBtn">REQUEST CODE</button>
+          </div>
+
+          <!--Pop up-->
+          <div class="popup" id="popup">
+            <h2>Thank You!</h2>
+            <p>
+              Please share proof of purchase to our instagram, or pay us with
+              cash in person. After we will send you the code.
+            </p>
+            <a href="https://www.instagram.com/iankovacs7/">Instagram</a>
+            <button id="okBtn">OK</button>
+          </div>
+
+          <!-- Preview tracks -->
+          <div class="preview-container">
+            <h2 class="preview-title">Preview</h2>
+            <div class="track-item">
+              <span class="track-name">Preview. ...</span>
+              <audio controls preload="none">
+                <source src="preview/side up.mp3" type="audio/mp3" />
+              </audio>
+            </div>
+            <div class="track-item">
+              <span class="track-name">Preview. ...</span>
+              <audio controls preload="none">
+                <source src="" type="audio/mp3" />
+              </audio>
+            </div>
+          </div>
+
+          <br />
+          <br />
+
+          <!-- Track List -->
+          <div class="track-container">
+            <div id="lockedState" class="locked-state">
+              <div class="lock-icon">◯</div>
+              <div class="locked-text">LOCKED</div>
+            </div>
+
+            <div id="trackList" class="track-list">
+              <div class="track-item">
+                <span class="track-name">01. CP-17</span>
+                <button class="download-btn" onclick="downloadTrack(1)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">02. CHRISTMAS CAROL</span>
+                <button class="download-btn" onclick="downloadTrack(2)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name"
+                  >03. SNEAKY FT. LADARRELL AND RONAN</span
+                >
+                <button class="download-btn" onclick="downloadTrack(3)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name"
+                  >04. STARDUST FT. DAVIAN, SEAN, MAX, AND LUKE</span
+                >
+                <button class="download-btn" onclick="downloadTrack(4)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">05. I'M LOVIN' IT</span>
+                <button class="download-btn" onclick="downloadTrack(5)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">06. TRES CALIENTES</span>
+                <button class="download-btn" onclick="downloadTrack(6)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">07. SIDE UP FT. CHONGZHE</span>
+                <button class="download-btn" onclick="downloadTrack(7)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name"
+                  >08. VETEMENTS FT. EUAN, LADARRELL, and RAFAEL</span
+                >
+                <button class="download-btn" onclick="downloadTrack(8)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">09. DISINGENIUS</span>
+                <button class="download-btn" onclick="downloadTrack(9)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+              <div class="track-item">
+                <span class="track-name">10. TOK TO ME</span>
+                <button class="download-btn" onclick="downloadTrack(10)">
+                  ↓ DOWNLOAD
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div>© 2026 PROD. BY MAX, CHRISTIAN, IAN, AND LUKE</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
