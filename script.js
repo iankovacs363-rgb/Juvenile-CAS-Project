@@ -1,5 +1,9 @@
 // Valid codes
-const validCodes = ['SQD77J3', '6OM37QJ', '6BZJ8DP', 'Q2B7UN6', 'F9BJ2HW','M8X0AJ7','DWL3GC6','KWN5SDF','XLIKQSF','I8YMBIH','OS3KUNW','Y5TIQ2Z','J2Y6W31','SZ6364Z','AXIZKT8','VOZPSE8','Z9NKEMD','SQJMDQ5','KU8BL55','9VYA4ZM','Q07QN2O','5I7WGDU','F1LLSBY','V8NWC9I','','','','','','','','','','','','','','','','',''];
+const validCodes = ['SQD77J3', '6OM37QJ', '6BZJ8DP', 'Q2B7UN6', 'F9BJ2HW','M8X0AJ7','DWL3GC6','KWN5SDF','XLIKQSF','I8YMBIH',
+    'OS3KUNW','Y5TIQ2Z','J2Y6W31','SZ6364Z','AXIZKT8','VOZPSE8','Z9NKEMD','SQJMDQ5','KU8BL55','9VYA4ZM',
+    'Q07QN2O','5I7WGDU','F1LLSBY','V8NWC9I','YEX43DC','FCP4QDH','IT8K1NW','6T21LAT','IVXWKKH','Y3ZCE1T',
+    'QBR3P1J','JYMFEVK','DTQICOY','HVY0ZB1','LWYPZO2','0V1VEEM','H1KNSJW','KAQG0TY','CQ5CEPF','1BFR8UE',
+    'J7Y68RE','BCNYQYS','5QE5PXR','84UM55I','FWLGH65','RQQ6VJI','L1L1E6M','NP99ASY','YOBTJ91','FXL9JBL'];
 
 // Elements
 const codeInput = document.getElementById('codeInput');
@@ -119,29 +123,23 @@ function togglePlay(button, trackNumber) {
 // Download track function
 function downloadTrack(trackNumber) {
     const trackUrls = {
-        1: 'tracks/01-CP-17.m4a',
-        2: 'tracks/02-CHRISTMAS-CAROL.m4a',
-        3: 'tracks/03-SNEAKY.m4a',
-        4: 'tracks/04-STARDUST.m4a',
-        5: 'tracks/05-IM-LOVIN-IT.m4a',
-        6: 'tracks/06-TRES-CALIENTES.m4a',
-        7: 'tracks/07-SIDE-UP.m4a',
-        8: 'tracks/08-VETEMENTS.m4a',
-        9: 'tracks/09-DISINGENIOUS.m4a',
-        10: 'tracks/10-TOK-TO-ME.m4a'
+        1: 'tracks/01-PARTY-LIKE-ITS-2016.m4a',
+        2: 'tracks/02-DISINGENIOUS.m4a',
+        3: 'tracks/03-TOK-TO-ME.m4a',
+        4: 'tracks/04-SNEAKY.m4a',
+        5: 'tracks/05-MIDNIGHT.m4a',
+        6: 'tracks/06-CHRISTMAS-CAROL.m4a',
+        7: 'tracks/07-FOREIGN.m4a',
     };
 
     const trackNames = {
-        1: '01-CP-17.m4a',
-        2: '02-CHRISTMAS-CAROL.m4a',
-        3: '03-SNEAKY.m4a',
-        4: '04-STARDUST.m4a',
-        5: '05-IM-LOVIN-IT.m4a',
-        6: '06-TRES-CALIENTES.m4a',
-        7: '07-SIDE-UP.m4a',
-        8: '08-VETEMENTS.m4a',
-        9: '09-DISINGENIOUS.m4a',
-        10: '10-TOK-TO-ME.m4a'
+        1: '01-PARTY-LIKE-ITS-2016.m4a',
+        2: '02-DISINGENIOUS.m4a',
+        3: '03-TOK-TO-ME.m4a',
+        4: '04-SNEAKY.m4a',
+        5: '05-MIDNIGHT.m4a',
+        6: '06-CHRISTMAS-CAROL.m4a',
+        7: '07-FOREIGN.m4a',
     };
 
     const url = trackUrls[trackNumber];
