@@ -130,6 +130,7 @@ function downloadTrack(trackNumber) {
         5: 'tracks/05-MIDNIGHT.m4a',
         6: 'tracks/06-CHRISTMAS-CAROL.m4a',
         7: 'tracks/07-FOREIGN.m4a',
+        8: 'tracks/08-CP-17.m4a'
     };
 
     const trackNames = {
@@ -140,6 +141,7 @@ function downloadTrack(trackNumber) {
         5: '05-MIDNIGHT.m4a',
         6: '06-CHRISTMAS-CAROL.m4a',
         7: '07-FOREIGN.m4a',
+        8: '08-CP-17'
     };
 
     const url = trackUrls[trackNumber];
