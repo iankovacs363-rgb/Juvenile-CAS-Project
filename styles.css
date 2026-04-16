@@ -335,6 +335,15 @@ body {
     .glitch-text {
         font-size: 0.65rem;
     }
+
+    .video-container {
+        padding: 15px;
+    }
+
+    .video-title {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
 }
 
 /* preview list */
@@ -399,4 +408,23 @@ body {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Music Video Section */
+.video-container {
+    margin-bottom: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: #000;
+}
+
+.video-container video::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.8);
 }
